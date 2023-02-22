@@ -4,8 +4,10 @@ import requests
 from requests_ntlm import HttpNtlmAuth
 from bs4 import BeautifulSoup
 
+username = "your_username"
+password = "your_password"
 ###################### COURSES #####################
-resp = requests.get('https://cms.guc.edu.eg', auth=HttpNtlmAuth('seif.alsaid', '2002frolicGamer'))
+resp = requests.get('https://cms.guc.edu.eg', auth=HttpNtlmAuth(username, password))
 courseSoup = BeautifulSoup(resp.text, 'html.parser')
 
 myCourses = courseSoup.find_all(id='ContentPlaceHolderright_ContentPlaceHoldercontent_GridViewdiss')
@@ -17,7 +19,7 @@ myCourses = courseSoup.find_all(id='ContentPlaceHolderright_ContentPlaceHolderco
 
 ###################### SCHEDULES #####################
 schedResp = requests.get('https://student.guc.edu.eg/Web/Student/Schedule/GroupSchedule.aspx',
-                         auth=HttpNtlmAuth('seif.alsaid', '2002frolicGamer'))
+                         auth=HttpNtlmAuth(username, password))
 schedSoup = BeautifulSoup(schedResp.text, 'html.parser')
 
 
