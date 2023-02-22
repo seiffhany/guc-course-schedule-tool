@@ -6,6 +6,9 @@ from bs4 import BeautifulSoup
 
 username = "your_username"
 password = "your_password"
+
+if username == "your_username" or password == "your_password":
+    print("Invalid Credentials! Please try again")
 ###################### COURSES #####################
 resp = requests.get('https://cms.guc.edu.eg', auth=HttpNtlmAuth(username, password))
 courseSoup = BeautifulSoup(resp.text, 'html.parser')
