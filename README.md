@@ -7,17 +7,17 @@ This tool is used to obtain your course and schedule data.
 * First
 
    ```commandline
-   $ git clone https://github.com/seiffhany/guc-course-schedule-tool
+   git clone https://github.com/seiffhany/guc-course-schedule-tool
    ```
    
 * Second
 
    ```commandline
-   $ pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
    
 * Third
 
    ```commandline
-   $ python main.py
+   python main.py
    ```
