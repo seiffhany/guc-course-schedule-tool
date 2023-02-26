@@ -173,7 +173,7 @@ def get_schedule():
                     label.grid(row=i+5, column=j, sticky=tk.NSEW)
                 # Create the empty cells
                 else:
-                    label = tk.Label(root, text=newSched[i-2][j-2], padx=10, pady=10, relief=tk.RIDGE)
+                    label = tk.Label(root, text=newSched[i-2][j-1], padx=10, pady=10, relief=tk.RIDGE)
                     label.grid(row=i+5, column=j, sticky=tk.NSEW)
                     
     except:
